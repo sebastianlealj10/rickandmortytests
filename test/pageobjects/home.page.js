@@ -1,7 +1,7 @@
 const Page = require('./page');
 class HomePage extends Page {
     get title () { return $('h1') }
-    get character () { return $('a[href="/character"]')}
+    get episode () { return $('a[href="/episode"]')}
 
     navigate(path)
     {
@@ -10,7 +10,7 @@ class HomePage extends Page {
 
     gotoCharacter()
     {
-        this.character.click();
+        this.episode.click();
     }
 }
 

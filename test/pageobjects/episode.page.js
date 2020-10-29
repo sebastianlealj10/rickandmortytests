@@ -1,13 +1,9 @@
 const Page = require('./page');
-class CharacterPage extends Page {
+class EpisodePage extends Page {
     get title () { return $('h1') }
-    get name () { return $('input[name="name"]') }
     get btnSubmit () { return $('button[type="submit"]') }
+    get cardGrid () { return $('.MuiGrid-item') }
 
-    fillName(name)
-    {
-        this.name.setValue(name);
-    }
 
     search()
     {
@@ -20,4 +16,4 @@ class CharacterPage extends Page {
     }
 }
 
-module.exports = new CharacterPage();
+module.exports = new EpisodePage();
